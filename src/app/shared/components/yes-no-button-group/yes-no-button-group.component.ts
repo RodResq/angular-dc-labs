@@ -23,3 +23,11 @@ export class YesNoButtonGroupComponent implements OnInit {
   }
 
 }
+
+enum YesNoButtonGroupOptions {
+  YES = "yes",
+  NO = "no"
+}
+
+
+
