@@ -21,9 +21,24 @@ export class YesNoButtonGroupComponent implements OnInit, ControlValueAccessor {
 
   public onChange = (value: string) => {};
 
+  public onTouched = () => {};
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  public writeValue(value: string): void {
+    this.value = value;
+    this.onChange(value);
+  }
+
+  public registerOnChange(fn: (value:string) => void): void {
+    this.onChange = fn;
+  }
+
+  public registerOnTouched(fn: () => void): void {
+    this.onTouched = fn;
   }
 
   public active(value: string): void {
@@ -31,17 +46,7 @@ export class YesNoButtonGroupComponent implements OnInit, ControlValueAccessor {
     this.valueChange.emit(value);
   }
 
-  public registerOnChange(fn: any): void {
-  }
-
-  public registerOnTouched(fn: any): void {
-  }
-
   public setDisabledState(isDisabled: boolean): void {
-  }
-
-  public writeValue(value: string): void {
-    this.value = value;
   }
 
 
