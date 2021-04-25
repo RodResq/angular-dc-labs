@@ -2,15 +2,15 @@
   <label class="label">{{ label }}</label>
   <button
     class="button button-yes"
-    [class.button-pressed]="value === 'yes'"
+    [class.button-pressed]="value === option.YES"
     type="button"
-    (click)="active('yes')">
+    (click)="active(option.YES)">
     Yes
   </button>
   <button
     class="button button-no"
-    [class.button-pressed]="value === 'no'"
+    [class.button-pressed]="value === option.NO"
     type="button"
-    (click)="active('no')">No
+    (click)="active(option.NO)">No
   </button>
 </div>
