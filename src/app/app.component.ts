@@ -8,7 +8,7 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 })
 export class AppComponent {
 
-  public yesNoAnser: string = 'no';
+  title = 'angula-dc-labs'
 
   public form: FormGroup = null;
 
