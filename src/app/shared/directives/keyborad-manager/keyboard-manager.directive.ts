@@ -27,3 +27,8 @@ export class KeyboardManagerDirective {
     }
   }
 }
+
+enum ArrowDirection {
+  LEFT = -1,
+  RIGHT = 1
+}
