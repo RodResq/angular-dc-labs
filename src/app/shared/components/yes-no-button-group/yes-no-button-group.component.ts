@@ -41,12 +41,12 @@ export class YesNoButtonGroupComponent implements OnInit, ControlValueAccessor {
     this.onTouched = fn;
   }
 
+  public setDisabledState(isDisabled: boolean): void {
+  }
+
   public active(value: string): void {
     this.value = value;
     this.valueChange.emit(value);
-  }
-
-  public setDisabledState(isDisabled: boolean): void {
   }
 
 
