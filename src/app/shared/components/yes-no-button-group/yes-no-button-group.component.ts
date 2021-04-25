@@ -19,6 +19,8 @@ export class YesNoButtonGroupComponent implements OnInit, ControlValueAccessor {
 
   public option = YesNoButtonGroupOptions;
 
+  public onChange = (value: string) => {};
+
   constructor() { }
 
   ngOnInit(): void {
