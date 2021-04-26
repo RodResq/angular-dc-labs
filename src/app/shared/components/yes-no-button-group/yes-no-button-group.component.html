@@ -6,6 +6,8 @@
   <label [attr.id]="id" class="label">{{ label }}</label>
   <button
     appKmItem
+    (focused)="active(option.YES)"
+    [attr.disabled]="disabled ? disabled : null"
     role="radio"
     class="button button-yes"
     [attr.tabindex]="value === option.YES || value === null ? 0 : -1"
@@ -17,6 +19,8 @@
   </button>
   <button
     appKmItem
+    (focused)="active(option.NO)"
+    [attr.disabled]="disabled ? disabled : null"
     role="radio"
     tabindex="-1"
     class="button button-no"
